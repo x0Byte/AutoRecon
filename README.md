@@ -61,9 +61,12 @@ The `pip3` command should now be usable.
 Further, it's recommended you use `pipx` to manage your python packages; this installs each python package in it's own virtualenv, and makes it available in the global context, which avoids conflicting package dependencies and the resulting instability. To summarise the installation instructions:
 
 ```bash
+$ sudo apt install python3-venv
 $ python3 -m pip install --user pipx
 $ python3 -m pipx ensurepath
 ```
+
+You will have to re-source your ~/.bashrc or ~/.zshrc file (or open a new tab) after running these commands in order to use pipx.
 
 Note that if you want to elevate privileges to run a program installed with `pipx`, with `sudo`, you have two options:
 
@@ -108,6 +111,7 @@ Additionally the following commands may need to be installed, depending on your 
 ```
 curl
 enum4linux
+ffuf
 gobuster
 nbtscan
 nikto
@@ -128,7 +132,7 @@ wkhtmltoimage
 On Kali Linux, you can ensure these are all installed using the following command:
 
 ```bash
-$ sudo apt install seclists curl enum4linux gobuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf
+$ sudo apt install seclists curl enum4linux ffuf gobuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf
 ```
 
 ## Installation
@@ -143,8 +147,10 @@ $ pipx install git+https://github.com/Tib3rius/AutoRecon.git
 
 ### Using `pip`
 
+If installing using pip, you'll need to run the installation command as root or with sudo in order to be able to run autorecon using sudo:
+
 ```bash
-$ python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
+$ sudo python3 -m pip install git+https://github.com/Tib3rius/AutoRecon.git
 ```
 
 ### Manual
