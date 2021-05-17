@@ -14,9 +14,9 @@ fun_set_text_color(){
 flag_header(){
     echo ""
     echo "+---------------------------------------------------------+"
-    echo "|                 Easy AutoRecon Installer                |"
+    echo "|               AutoRecon for OSCP and CTF                |"
     echo "+---------------------------------------------------------+"
-    echo "|              A tool to auto-recon ctf boxes             |"
+    echo "|             A tool to auto-recon & ctf boxes            |"
     echo "+---------------------------------------------------------+"
     echo "|                          Enjoy                          |"
     echo "+---------------------------------------------------------+"
